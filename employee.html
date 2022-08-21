@@ -1,0 +1,187 @@
+<html>
+<head>
+    <title>Employee Details</title>
+    <style>
+
+        td {
+            padding: 7px;
+        }
+    </style>
+</head>
+<body style="background-color: deepskyblue;">
+    <script>
+        function random_function() {
+            var a = document.getElementById("input").value;
+            if (a === "BTech") {
+                var arr = ["--select--", "CSE", "MECH", "ECE", "EEE", "CIVIL"];
+            }
+            if (a === "Bsc") {
+                var arr = ["--select--", "BSc Agriculture", "BSc Biotechnology", "BSc Computer Science"];
+            }
+            if (a === "BA") {
+                var arr = ["--select--", "BA in Psychology", " BA in Journalism", "BA in Hospitality"];
+            }
+            var string;
+
+            for (i = 0; i < arr.length; i++) {
+               // string = string + "<option>" + arr[i] + "</option>";
+                string +=  "<option>" + arr[i] + "</option>";
+            }
+            document.getElementById("output").innerHTML = string;
+
+        }
+    </script>
+    <h1>Employee Data Entry Form</h1>
+    <form>
+        <div id="personal-details">
+            <h2 align="center" style="background-color: aquamarine;color: black;padding: 10px;text-align: center;">Employee Details</h2>
+            <table width="100%">
+                <tr>
+                    <td>First Name</td>
+                    <td>
+                        <input type="text" id="txtName" placeholder="First Name" size="25">
+                    </td>
+                    <td>Middle Name</td>
+                    <td>
+                        <input type="text" size="25">
+                    </td>
+                    <td>Last Name</td>
+                    <td>
+                        <input type="text" size="25">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Father's Name</td>
+                    <td>
+                        <input type="text" placeholder="Father's Name" size="25">
+                    </td>
+                    <td>Mother's Name</td>
+                    <td>
+                        <input type="text" placeholder="Father's Name" size="25">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date of Birth</td>
+                    <td>
+                        <input type="date">
+                    </td>
+                    <td>Place of Birth</td>
+                    <td>
+                        <input type="text" placeholder="Place of Birth" size="25">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select Gender</td>
+                    <td>
+                        <input type="radio" name="gender" value="male">Male
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" value="female">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Contact Details</td>
+                </tr>
+                <tr>
+                    <td>Mobile Number</td>
+                    <td>
+                        <input type="number" size="25">
+                    </td>
+                    <td>Email Id</td>
+                    <td>
+                        <input type="email" size="25">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Language Known</td>
+                    <td>
+                        <input type="checkbox" value="english">English
+                    </td>
+                    <td>
+                        <input type="checkbox" value="Telugu">Telugu
+                    </td>
+                    <td>
+                        <input type="checkbox" value="hindi">Hindi
+                    </td>
+                </tr>
+                <tr>
+                    <td> Mother Tongue</td>
+                    <td>
+                        <select>
+                            <option>English</option>
+                            <option>Telugu</option>
+                            <option>Hindi</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Aadhar Number</td>
+                    <td>
+                        <input type="number" size="25">
+                    </td>
+                    <td>Pan Card Number</td>
+                    <td>
+                        <input type="number" size="25">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- Educational Qualification -->
+        <div id="educational-qualification">
+            <h2 style="background-color: aquamarine;color: black;padding: 10px;text-align: center;"> Qualification</h2>
+            <table width="100%">
+                <tr>
+                    <td>Qualification</td>
+                    <td>
+                        <select id="input" onchange="random_function()">
+                            <option>select option</option>
+                            <option>BTech</option>
+                            <option>Bsc</option>
+                            <option>BA</option>
+                        </select>
+                        <select id="output" onchange="random_function1()"></select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- Work Experience -->
+        <div id="work-experience">
+            <h2 style="background-color: aquamarine;color: black;padding: 10px;text-align: center;">Work Experience</h2>
+            <table width="100%">
+                <tr>
+                    <td>Sl No</td>
+                    <td>Company Address</td>
+                    <td>Work / Role</td>
+                    <td>Duration (form - to)</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <input type="text" size="25">
+                    </td>
+                    <td>
+                        <input type="text" size="25">
+                    </td>
+                    <td>
+                        <input type="date" size="25">
+                    </td>
+                    <td>
+                        <input type="date" size="25">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="Submit" value="Submit" class="button">
+                    </td>
+                    <td>
+                        <input type="Reset" value="Reset" class="button">
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
+
